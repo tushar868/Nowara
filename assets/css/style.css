@@ -395,16 +395,18 @@ button, a { transition: var(--transition); }
   justify-content: space-between;
   align-items: center;
   padding-bottom: 40px;
-  border-bottom: 1px solid var(--cultured-1);
+  border-bottom: 1px solid var(--gold);
   margin-bottom: 25px;
+  top: 0;
 }
 
-.navbar-top .logo img { width: 200px; }
+.navbar-top .logo img { width: 180px; }
 
 .nav-close-btn ion-icon {
-  font-size: 20px;
+  font-size: 30px;
   --ionicon-stroke-width: 45px;
   padding: 5px;
+  color: var(--gold);
 }
 
 .navbar-link {
