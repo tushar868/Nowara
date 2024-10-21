@@ -75,7 +75,9 @@
   --shadow-1: 0 5px 20px 0 hsla(219, 56%, 21%, 0.1);
   --shadow-2: 0 16px 32px hsla(188, 63%, 7%, 0.1);
 
- 
+  --radius-2: 2px;
+  --radius-5: 5px;
+  --radius-8: 8px;
 
 }
 
@@ -267,6 +269,10 @@ button, a { transition: var(--transition); }
 .has-scrollbar > li {
   min-width: 100%;
   scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar {
+  height: 8px; 
 }
 
 .has-scrollbar::-webkit-scrollbar-track {
@@ -473,10 +479,10 @@ button, a { transition: var(--transition); }
   background-image: url('../images/cta-bg.jpg');
   padding-block: var(--section-padding);
   background-size:cover; 
-            background-position: center; 
-            padding-block: var(--section-padding); 
-            position: relative;
-            margin-top: -20px;
+  background-position: center; 
+  padding-block: var(--section-padding); 
+  position: relative;
+  margin-top: -20px;
   
         
             
@@ -1230,6 +1236,30 @@ textarea.input-field {
 .copyright a:is(:hover, :focus) { color: var(--orange-soda); }
 
 
+/*-----------------------------------*\
+  #BACK TO TOP
+\*-----------------------------------*/
+
+.back-top-btn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: var(--navy);
+  color: var(--white);
+  font-size: 14px;
+  padding: 12px;
+  border-radius: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 4;
+}
+
+.back-top-btn.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(-10px);
+}
 
 
 
@@ -1348,9 +1378,19 @@ textarea.input-field {
     gap: 20px;
   }
 
+  .footer { margin-bottom: 0; }
+
 }
 
 
+@media (max-width: 768px) {
+  html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+  }
+ 
+}
 
 
 
