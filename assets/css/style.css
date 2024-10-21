@@ -1113,7 +1113,7 @@ textarea.input-field {
 .cta-card .card-text {
   color: var(--navy);
   font-size: var(--fs-5);
-  line-height: 0.5;
+  
 }
 
 .cta-btn {
