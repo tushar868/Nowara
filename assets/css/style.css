@@ -261,6 +261,7 @@ button, a { transition: var(--transition); }
   scroll-padding-left: 15px;
   padding-bottom: 60px;
   scroll-snap-type: inline mandatory;
+  margin-bottom: 50px;
 }
 
 .has-scrollbar > li {
