@@ -67,3 +67,30 @@ window.addEventListener("scroll", function () {
     backTopBtn.classList.remove("active");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible"); // Add the 'visible' class when in view
+        observer.unobserve(entry.target);     // Stop observing once animated
+      }
+    });
+  }, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+
+  elements.forEach(element => observer.observe(element));
+});
+
+window.addEventListener('load', () => {
+  const aminitiesList = document.querySelector('.aminities-list');
+
+  setInterval(() => {
+    aminitiesList.scrollBy({
+      left: 320, // Adjust to scroll one card at a time (or use a smaller number for smoother scrolling)
+      behavior: 'smooth',
+    });
+  }, 3000); // Adjust the interval time (3 seconds in this case)
+});
+
