@@ -86,11 +86,21 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener('load', () => {
   const aminitiesList = document.querySelector('.aminities-list');
 
-  setInterval(() => {
+  const scrollInterval = setInterval(() => {
+    const cardWidth = aminitiesList.querySelector('li').offsetWidth + 20; // Get the width of each card + margin
     aminitiesList.scrollBy({
-      left: 320, // Adjust to scroll one card at a time (or use a smaller number for smoother scrolling)
+      left: cardWidth, // Scroll by one card's width
       behavior: 'smooth',
     });
-  }, 3000); // Adjust the interval time (3 seconds in this case)
+  }, 3000); // Scroll every 3 seconds
+
+  aminitiesList.addEventListener('transitionend', () => {
+    // Reset the scroll position to 0 when it reaches the end to create the infinite loop effect
+    if (aminitiesList.scrollLeft >= aminitiesList.scrollWidth - aminitiesList.offsetWidth) {
+      aminitiesList.scrollLeft = 0;
+    }
+  });
 });
+
+
 

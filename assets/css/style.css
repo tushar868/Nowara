@@ -642,7 +642,7 @@ button, a { transition: var(--transition); }
 
 .aminities-list li {
   flex-shrink: 0;
-  width: 300px; /* Width of each card */
+  width: 300px; /* Fixed width of each card */
   margin-right: 20px; /* Space between cards */
   position: relative;
   padding-bottom: 60px;
@@ -651,12 +651,11 @@ button, a { transition: var(--transition); }
 .aminities-card {
   overflow: hidden;
   box-shadow: var(--shadow-2);
-  
 }
 
 .aminities-card-banner img {
   width: 100%;
-  height: 300px;
+  height: 280px;
   object-fit: cover;
 }
 
@@ -672,7 +671,6 @@ button, a { transition: var(--transition); }
   font-size: 1.3rem;
   --font-weight: var(--fw-600);
   margin: 10px 0;
-  
 }
 
 .aminities-title:is(:hover, :focus) { color: var(--gold); }
@@ -687,32 +685,43 @@ button, a { transition: var(--transition); }
   }
 }
 
-
+/* Adjust number of visible cards */
 @media (min-width: 1200px) {
   .aminities-list {
     gap: 20px;
+    width: calc(300px * 6); /* For 5 cards visible */
   }
-
   .aminities-list li {
-    width: calc(33.33% - 20px);
+    width: 300px; /* Card width remains the same */
   }
 }
-
 
 @media (max-width: 1200px) {
+  .aminities-list {
+    width: calc(300px * 6); /* For 4 cards visible */
+  }
   .aminities-list li {
-    width: calc(50% - 20px);
+    width: 300px; /* Card width remains the same */
   }
 }
-
 
 @media (max-width: 768px) {
+  .aminities-list {
+    width: calc(300px * 6); /* For 3 cards visible */
+  }
   .aminities-list li {
-    width: calc(100% - 20px);
+    width: 300px; /* Card width remains the same */
   }
 }
 
-
+@media (max-width: 480px) {
+  .aminities-list {
+    width: calc(300px * 6); /* For 2 cards visible */
+  }
+  .aminities-list li {
+    width: 300px; /* Card width remains the same */
+  }
+}
 
 /*-----------------------------------*\
   #SERVICE
