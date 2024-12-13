@@ -2298,7 +2298,7 @@ section, .content {
 
 @media screen and (max-width: 767px) {
   .whatsapp-icon {
-      margin-top: 9px;
+      margin-top: 11px;
       font-size: 20px;
   }
 
@@ -2306,7 +2306,7 @@ section, .content {
       width: 40px;
       height: 40px;
       bottom: 65px;
-      right: 15px;
+      right: 20px;
       font-size: 15px;
   }
 }
