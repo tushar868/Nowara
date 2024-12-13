@@ -104,3 +104,24 @@ window.addEventListener('load', () => {
 
 
 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const floatingBtn = document.querySelector('.floating-btn');
+  const popupForm = document.querySelector('.popup-form');
+  const closeBtn = document.querySelector('.close-btn');
+
+  // Open the form when the floating button is clicked
+  floatingBtn.addEventListener('click', function() {
+      // Add active class to trigger animations
+      floatingBtn.classList.add('active');
+      popupForm.classList.add('active');
+  });
+
+  // Close the form when the close button is clicked
+  closeBtn.addEventListener('click', function() {
+      // Remove active class to hide the form and button
+      floatingBtn.classList.remove('active');
+      popupForm.classList.remove('active');
+  });
+});
