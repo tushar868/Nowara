@@ -493,7 +493,7 @@ button, a { transition: var(--transition); }
 \*-----------------------------------*/
 
 .hero {
-  background-image: url('../images/cta-bg.jpg');
+  background-image: url('../images/home/cta-bg.jpg');
   padding-block: var(--section-padding);
   background-size:cover; 
   background-position: center; 
@@ -2208,7 +2208,7 @@ textarea.input-field {
   border: none;
   font-size: 30px;
   cursor: pointer;
-  color: #29313d;
+  color: var(--navy);
   position: absolute;
   top: 10px;
   right: 10px;
@@ -2239,9 +2239,38 @@ textarea.input-field {
   box-sizing: border-box;
 }
 
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+/* Ionicons Inside Input */
+.input-group ion-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--gold);
+}
+
+.input-group input {
+  width: 90%;
+  padding: 12px 12px 12px 40px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+
+}
+
+.input-group input:focus {
+  border-color: var(--navy);
+}
+
 
 .popup-form button[type="submit"] {
-  width: 100%;
+  width: 90%;
   padding: 10px;
   background-color: var(--gold);
   color: var(--black);
