@@ -125,3 +125,18 @@ document.addEventListener('DOMContentLoaded', function() {
       popupForm.classList.remove('active');
   });
 });
+
+
+const popup = document.getElementById("popup");
+        const agreeBtn = document.getElementById("agreeBtn");
+
+        // Check if popup was shown in this session
+        if (!sessionStorage.getItem("popupShown")) {
+            popup.classList.remove("hidden"); // Show popup
+        }
+
+        // When user clicks "I Agree", hide popup and store session flag
+        agreeBtn.addEventListener("click", () => {
+            popup.classList.add("hidden");
+            sessionStorage.setItem("popupShown", "true"); // Store session variable
+        });
