@@ -126,6 +126,23 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+const faqItems = document.querySelectorAll('.faq-item');
+
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+
+      // Close all
+      faqItems.forEach(el => el.classList.remove('active'));
+
+      // If not already active, open it
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
 
 const popup = document.getElementById("popup");
         const agreeBtn = document.getElementById("agreeBtn");
@@ -140,3 +157,5 @@ const popup = document.getElementById("popup");
             popup.classList.add("hidden");
             sessionStorage.setItem("popupShown", "true"); // Store session variable
         });
+
+
