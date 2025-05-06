@@ -211,6 +211,14 @@ button, a { transition: var(--transition); }
   z-index: 1;
 }
 
+.btn a{
+  color: var(--white);
+}
+
+.btn a:hover{
+  color: var(--black);
+}
+
 .btn:is(:hover, :focus) {
   background: var(--gold);
   color: var(--black);
@@ -1433,6 +1441,10 @@ textarea.input-field {
   align-items: center;
   gap: 20px;
   padding-block: 10px;
+}
+
+.social-list a:hover{
+  color: var(--gold);
 }
 
 .footer-list:not(:last-child) { margin-bottom: 50px; }

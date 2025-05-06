@@ -45,7 +45,7 @@
   
   <button class="floating-btn">Enquire Now</button>
 
-  <div class="popup-form">
+  <div class="popup-form" id="enq">
     <button class="close-btn">&times;</button>
     <form>
         <div class="input-group">
@@ -229,7 +229,11 @@
               Upcoming Affordable Housing Project In Farukhnagar With 2 BHk And 3 BHk Near Reliance MET City Township.
             </p>
 
-            <button class="btn">Make An Enquiry</button>
+            <button class="btn">
+              <a href="#map"> 
+                Make An Enquiry
+              </a>
+            </button>
 
           </div>
 
@@ -1032,7 +1036,7 @@
 
           
 
-          <form action="" class="contact-form">
+          <form method="post" action="" name="contact-form" class="contact-form">
 
             <div class="input-wrapper">
               <input type="text" name="name" aria-label="name" placeholder="Your name*" required class="input-field">
@@ -1058,7 +1062,7 @@
               </label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Send Message</button>
+            <button type="submit" value="Submit" id="submit" class="btn btn-primary">Send Message</button>
 
           </form>
 
@@ -1315,6 +1319,14 @@
                   <span>+91 9505001001</span>
                 </a>
               </li>
+
+              <li>
+                <a href="tel:01245181321" class="contact-link">
+                  <ion-icon name="call-outline"></ion-icon>
+  
+                  <span>01245181321</span>
+                </a>
+              </li>
   
               <li>
                 <a href="mailto:info@nowararealty.com" class="contact-link">
@@ -1334,29 +1346,23 @@
               <p class="footer-list-title">Follow Us</p>
             </li>
 
-            <ul class="social-list">
+            <ul class="social-list ">
 
               <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
-  
-              <li>
-                <a href="#" class="social-link">
+                <a href="https://www.linkedin.com/company/nowararealty/" class="social-link">
                   <ion-icon name="logo-linkedin"></ion-icon>
                 </a>
               </li>
+
+              <li>
+                <a href="https://www.instagram.com/nowararealty/" class="social-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
   
               <li>
-                <a href="#" class="social-link">
-                  <ion-icon name="logo-youtube"></ion-icon>
+                <a href="https://wa.me/+919505001001" class="social-link">
+                  <ion-icon name="logo-whatsapp"></ion-icon>
                 </a>
               </li>
   
@@ -1416,6 +1422,8 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/contact-us.js"></script>
+  <script src="./assets/js/enquire.js"></script>
 
   <!-- 
     - ionicon link
